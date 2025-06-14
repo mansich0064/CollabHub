@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - CollabHub</title>
+    <link rel="stylesheet" href="../static/css/forgot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+     <!-- Header Section -->
+     <header>
+        <div class="containe">
+            <!-- Logo Section with Link -->
+            <div class="logo">
+                <a href="#">
+                    <img src="../static/css/logo.png" alt="CollabHub Logo">
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+
+            <!-- Call to Action Button -->
+            <a href="/login" class="login-button">Back</a>
+        </div>
+    </header>
+    <!-- Forgot Password Section -->
+     <main>
+    <section class="forgot-password">
+        <div class="container">
+            <h2>Forgot Password?</h2>
+            <p>Enter your registered email to reset your password.</p>
+            <form id="forgot-password-form">
+                <!-- Email Input -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <button type="button" class="send-otp-btn">Send OTP</button>
+
+                <!-- OTP Verification -->
+                <label for="otp">OTP:</label>
+                <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" required>
+
+                <!-- New Password -->
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" placeholder="Enter new password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Confirm new password" required>
+
+                <button type="submit" class="reset-password-btn">Reset Password</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 CollabHub. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
+     </main>
+</body>
+</html>

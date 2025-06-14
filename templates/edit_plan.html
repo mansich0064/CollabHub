@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Plan</title>
+  <link rel="stylesheet" href="../static/css/edit_plan.css" /> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src="../static/css/logo.png" alt="CollabHub Logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/features">Features</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        {% if session['user_id'] %}
+          <a href="/profile" class="button">Profile</a>
+          <a href="/logout" class="button">Logout</a>
+        {% else %}
+          <a href="/login" class="button">Login</a>
+        {% endif %}
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Edit Plan Container -->
+  <div class="edit-plan-container">
+    <form method="POST">
+      <textarea name="plan" rows="10" cols="50">{{ plan }}</textarea>
+      <button type="submit" class="btn btn-primary">Done</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CollabHub. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

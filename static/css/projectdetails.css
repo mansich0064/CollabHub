@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    background-image: url('Background.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    font-family: 'Arial', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #FFD700;
+}
+
+/* Header */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+header .nav-links {
+    display: flex;
+    list-style: none;
+}
+header .nav-links li {
+    margin: 0 10px;
+}
+header .nav-links a, .cta {
+    color: #FFD700;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+header .cta {
+    background: #FFD700;
+    color: #000000;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+header .cta:hover {
+    background: #FFD700;
+}
+header {
+    background: #000000; /* Dark black header */
+    color: #f5c842;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f5c842; /* Thin golden line below the header */
+}
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Main Section */
+
+.project-details {
+    max-width: 500px; /* Reduced width */
+    margin: 50px auto;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 30px; /* Reduced padding */
+    background: #1e1e1e;
+    border: 2px solid #d064c3;;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px #d064c3;;
+}
+.project-details h1 {
+    font-size: 28px; /* Slightly smaller heading */
+    margin-bottom: 10px;
+    color: #d064c3;;
+}
+.project-details p {
+    font-size: 20px; /* Reduced font size for text */
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* Form */
+.project-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Reduced gap between fields */
+}
+.project-form label {
+    text-align: left;
+    font-size: 15px; /* Slightly smaller labels */
+    color:  #FFD700;
+}
+.project-form input, 
+.project-form textarea, 
+.project-form select {
+    width: 100%;
+    padding: 5px; /* Reduced padding for fields */
+    border: 1px solid #d064c3;;
+    border-radius: 5px;
+    background: #000;
+    color: rgb(11, 186, 235);
+    -webkit-appearance: none;
+    
+}
+.project-form input:focus, 
+.project-form textarea:focus, 
+.project-form select:focus {
+    outline: none;
+    border-color: rgb(11, 186, 235);;
+    box-shadow: 0 0 10px  rgb(11, 186, 235);;
+}
+input:-webkit-autofill {
+    background-color: black !important; /* Keep background black */
+    color: rgb(11, 186, 235) !important; /* Keep text pink */
+    -webkit-text-fill-color: rgb(11, 186, 235) !important; /* Override text color in autofill */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
+
+/* Additional Styles for Firefox */
+input::placeholder {
+    color: #d064c3; /* Placeholder color pink */
+    opacity: 1; /* Ensure full opacity */
+}
+
+.project-form .next-button {
+    background: #d064c3;;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+
+/* Hover Effect */
+.project-details:hover {
+    border-color: #d064c3;; /* Hover Effect */
+    box-shadow: 0 8px 16px  #d064c3;;
+}
+   
+
+
+.project-form .next-button:hover {
+    background: rgb(11, 186, 235);
+    color: #121212;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f5c842;
+}
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+footer .footer-links li {
+    margin: 0 10px;
+}
+footer .footer-links a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer .footer-links a:hover {
+    color: #FFD700;
+}

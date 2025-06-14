@@ -1,0 +1,168 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFD700;
+    background-color: #000000;
+}
+
+
+/* Header */
+header .containe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+header .nav-links {
+    display: flex;
+    list-style: none;
+}
+header .nav-links li {
+    margin: 0 10px;
+}
+header .nav-links a, .cta {
+    color: #FFD700;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+header .cta {
+    background: #FFD700;
+    color: #000000;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+header .cta:hover {
+    background: #FFD700;
+}
+header {
+    background: #000000; /* Dark black header */
+    color: #f5c842;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f5c842; /* Thin golden line below the header */
+}
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Forgot Password Section */
+.forgot-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    background: url('background-image.jpg') ;
+}
+.container {
+    background: #121212;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(11, 186, 235, 0.3);
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid rgba(11, 186, 235, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.container:hover {
+    border-color:rgba(11, 186, 235, 0.6); /* Hover Effect */
+    box-shadow: 8px 8px 16px  rgba(11, 186, 235, 0.6);
+}
+h2 {
+    color: #FFD700;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+p {
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #FFD700;
+    font-size: 14px;
+    text-align: left;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(11, 186, 235, 0.6);
+    border-radius: 5px;
+    background: #000000;
+    color: #FFD700;
+    -webkit-appearance: none;
+}
+input::placeholder {
+    color: #bbbbbb;
+    opacity: 1;
+}
+input:-webkit-autofill {
+    background-color: black !important; /* Keep background black */
+    color: rgb(83, 81, 81) !important; /* Keep text pink */
+    -webkit-text-fill-color: #FFD700 !important; /* Override text color in autofill */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #FFD700;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background: #11bceb;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #FFD700;
+}
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+footer .footer-links li {
+    margin: 0 15px;
+}
+footer .footer-links a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer .footer-links a:hover {
+    color: #11bceb;
+}

@@ -1,0 +1,170 @@
+/* General Body Style */
+body {
+    
+    background-image: url('Background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #000; /* Header background color */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Container width */
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 80px; /* Adjust as needed */
+    width: auto;
+}
+
+/* Navigation Links */
+header .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
+    color: #f5c842;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* Call to Action Button */
+header .cta {
+    background: #f5c842;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header .cta:hover {
+    background: #d4a02a; /* Slightly darker gold on hover */
+}
+header {
+    background: #000000; /* Dark black header */
+    color: #f5c842;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f5c842; /* Thin golden line below the header */
+}
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+/* Main Content Section */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Space between the boxes */
+    flex-grow: 1;
+}
+
+/* Box Styles */
+.box {
+    background-color: #000; /* Box background color */
+    border: 2px solid #FFD700; /* Golden border */
+    box-shadow: 5px 5px 10px 0px #FFD700; /* Golden shadow */
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:black; /* Golden color */
+    color: #FFD700; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.box-text {
+    color: #FFD700; /* Golden text color */
+}
+
+/* Hover effect for Box */
+.box:hover {
+    transform: translateY(-10px); /* Moves the box slightly upwards */
+    box-shadow: 0 0 25px 10px #FFD700; /* Enhances the shadow */
+}
+
+/* Footer Styles */
+footer {
+    background: #000000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f5c842; /* Thin golden line above the footer */
+}
+footer {
+    background: #000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer .footer-links li {
+    margin: 0 10px;
+}
+
+footer .footer-links a {
+    color: #f5c842;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #d4a02a; /* Richer gold hover effect */
+}

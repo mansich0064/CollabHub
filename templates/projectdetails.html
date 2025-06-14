@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../static/css/projectdetails.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <!-- Logo Section with Link -->
+            <div class="logo">
+                <a href="#">
+                    <img src="../static/css/logo.png" alt="CollabHub Logo">
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+
+            <!-- Call to Action Button -->
+            <a href="/open_project" class="login-button">Back</a>
+        </div>
+    </header>
+
+    <main class="project-details">
+        <h1>Project Details</h1>
+        <p>Fill in the details of your new project to get started.</p>
+        
+        <!-- Corrected form action URL and name attribute -->
+        <form class="project-form" action="/projectdetails" method="POST">
+
+            <label for="project-name">Project Name:</label>
+            <input type="text" id="project-name" name="project-name" placeholder="Enter your project name" required>
+        
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Briefly describe your project" required></textarea>
+        
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+        
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+        
+            <button type="submit" class="next-button">Next Step</button>
+        </form>
+        
+    </main>
+
+    <footer>
+        <p>© 2024 CollabHub. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

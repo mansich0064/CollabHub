@@ -1,0 +1,193 @@
+/* General Body Style */
+body {
+    background-image: url('Background.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFD700;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #000; /* Black background */
+    color: #f5c842; /* Golden text */
+    padding: 10px 0;
+    border-bottom: 1px solid #f5c842; /* Golden border */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* On top of content */
+}
+main, .content {
+    flex: 1;
+    margin-top: 80px; /* Adjust this to the actual height of the header */
+    padding: 20px;
+}
+
+/* Container for Header Content */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+header .logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Navigation Links */
+header .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
+    color: #f5c842;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+header .nav-links a:hover {
+     /* Darker gold on hover */
+    border-radius: 5px;
+}
+
+/* Call to Action Button */
+header .cta {
+    background: #f5c842;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header .cta:hover {
+    background: #d4a02a; /* Slightly darker gold on hover */
+}
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Adjust Main Content Position for Fixed Header */
+main {
+    margin-top: 120px; /* Adjust for header height */
+    flex: 1;
+    padding: 20px;
+    
+}
+.container {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center;
+    gap: 10px; /* Space between the containers */
+    flex-grow: 1;
+    padding: 200px 200px;
+}
+
+/* Info Box Styles */
+.info-box {
+    background-color: #000; /* Box background color */
+    border: 2px solid #d064c3; /* Golden border */
+    box-shadow: 5px 5px 10px 0px #d064c3; /* Golden shadow */
+    padding: 50px;
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box h3 {
+    color: #FFD700; /* Golden text color for name */
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #f5c842; /* Light gold color for text */
+    margin: 5px 0;
+}
+
+/* Hover effect for Info Box */
+.info-box:hover {
+    transform: translateY(-10px); /* Moves the box slightly upwards */
+    box-shadow: 0 0 25px 10px rgb(11, 186, 235); /* Enhances the shadow */
+}
+.fas.fa-envelope{
+    font-size: 12px;
+    color: #FFD700;
+    margin-bottom: 30px;
+}
+.fas.fa-phone {
+    font-size: 15px;
+    color: #FFD700;
+    margin-bottom: 20px;
+    transform: rotate(100deg);
+}
+
+/* Footer Styles */
+footer {
+    background: #000000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f5c842; /* Thin golden line above the footer */
+}
+footer {
+    background: #000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer .footer-links li {
+    margin: 0 10px;
+}
+
+footer .footer-links a {
+    color: #f5c842;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #d4a02a; /* Richer gold hover effect */
+}

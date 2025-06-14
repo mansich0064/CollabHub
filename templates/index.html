@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CollabHub</title>
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <!-- Logo Section with Link -->
+            <div class="logo">
+                <a href="#">
+                    <img src="../static/css/logo.png" alt="CollabHub Logo">
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                {% if session['user_id'] %}
+    <a href="/profile" class="button">Profile</a>
+    <a href="/logout" class="button">Logout</a>
+{% else %}
+    <a href="/login" class="button">Login</a>
+{% endif %}
+            </ul>
+
+            <!-- Call to Action Button -->
+            <a href="/login" class="login-button">Login</a>
+
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="../static/css/homebackground.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h2>Welcome To CollabHub</h2>
+            <h2>Experience Collaboration Like Never Before</h2>
+            <p>Your ultimate platform for group project collaboration.</p>
+            <a href="/open_project" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+   <!-- Features Section -->
+<section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-list">
+        <div class="feature">
+            <i class="fas fa-cogs feature-icon"></i> <!-- Icon for Project Management -->
+            <h3>Project Management</h3>
+            <p>Organize and manage your projects with ease.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-tasks feature-icon"></i> <!-- Icon for Task Assignment -->
+            <h3>Task Assignment</h3>
+            <p>Assign tasks to team members efficiently.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-users feature-icon"></i> <!-- Icon for Real-Time Collaboration -->
+            <h3>Real-Time Collaboration</h3>
+            <p>Collaborate on projects in real-time.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 CollabHub. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

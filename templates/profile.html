@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="../static/css/profile.css"> <!-- Add your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/index">
+                    <img src="../static/css/logo.png" alt="CollabHub Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/profile">Profile</a></li> <!-- Profile link -->
+            </ul>
+        </div>
+    </header>
+    <div id="welcome-message" class="welcome-popup">
+        <center>Welcome, {{ username }}!</center>
+    </div>
+
+    <!-- Profile content -->
+    <div class="profile-container">
+        <h1>{{ username }}</h1>
+    </div>
+
+    <!-- JavaScript to hide after 5 seconds -->
+    <script>
+        setTimeout(function () {
+            const msg = document.getElementById('welcome-message');
+            msg.style.opacity = '0';
+            setTimeout(() => msg.style.display = 'none', 500); // remove from layout after fade out
+        }, 1000); // 4 seconds visible
+    </script>
+</body>
+
+</html>

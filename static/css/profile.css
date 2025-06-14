@@ -1,0 +1,103 @@
+/* General Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    line-height: 1.6;
+    color: #FFD700; /* Golden text */
+    background-color: #000000; /* Black background */
+}
+
+/* Header */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+header .nav-links {
+    display: flex;
+    list-style: none;
+}
+header .nav-links li {
+    margin: 0 10px;
+}
+header .nav-links a {
+    color: #FFD700;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+header {
+    background: #000000; /* Dark black header */
+    color: #f5c842;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f5c842; /* Thin golden line below the header */
+}
+
+/* Profile/Logout links are treated as regular menu items */
+header .nav-links li a {
+    font-weight: bold;  /* Make links bold */
+}
+
+.profile-container {
+    position: absolute;
+    top: 150px;   /* Distance from the top */
+    left: 50px;   /* Distance from the left */
+    color: #FFD700;
+}
+
+.profile-container h1 {
+    font-size: 36px;     /* Adjust font size */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000; /* Optional: make it pop */
+}
+.welcome-popup {
+    background-color: #111;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    padding: 25px 75px;
+    font-size: 20px;
+    text-align: center;
+    position: fixed;
+    top: 370px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    box-shadow: 0 0 15px #FFD700;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f5c842;
+}
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+footer .footer-links li {
+    margin: 0 10px;
+}
+footer .footer-links a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer .footer-links a:hover {
+    color: #FFD700;
+}

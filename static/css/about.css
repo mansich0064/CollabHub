@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    background-image: url('Background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    color: #FFD700; /* Dark text color */
+    background-color: #000;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #000; /* Header background color */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Logo Styling */
+header .logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Links */
+header .nav-links {
+    display: flex;
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
+    color: #f5c842;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* Call to Action Button */
+header .cta {
+    background: #f5c842;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header .cta:hover {
+    background: #d4a02a; /* Slightly darker gold on hover */
+}
+header {
+    background: #000000; /* Dark black header */
+    color: #f5c842;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f5c842; /* Thin golden line below the header */
+}
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+/* About Section Styles */
+#about {
+    padding: 80px 20px;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+/* Gradient Text for <h1> */
+/* Gradient Text for About Us Heading */
+#about .about-container h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #f703db, #18d3e8); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes text show the gradient */
+    text-align: center;
+    margin-top: -20px; /* Move the heading upwards */
+}
+
+
+/* About Details */
+.about-details,
+.additional-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap content for smaller screens */
+    gap: 20px;
+}
+
+/* Individual Boxes */
+.about-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    flex: 1;
+    max-width: 30%; /* Ensure boxes are aligned */
+    margin: 15px;
+    border-radius: 8px;
+    border: 2px solid #d064c3; /* Stylish border color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    text-align: left;
+}
+
+/* Hover Effect for Boxes */
+.about-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(250, 21, 166, 0.6);
+    background-color: rgba(0, 0, 0, 0.85);
+    border-color: #ff71c1;
+}
+
+.about-box h2 {
+    color: #f5c842;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Hover Text Effects */
+.about-box:hover h2 {
+    color: #ffd700; /* Gold hover effect */
+}
+
+.about-box:hover p {
+    color: #ffd700;
+}
+
+
+/* Footer Styles */
+footer {
+    background: #000000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f5c842; /* Thin golden line above the footer */
+}
+footer {
+    background: #000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer .footer-links li {
+    margin: 0 10px;
+}
+
+footer .footer-links a {
+    color: #f5c842;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #d4a02a; /* Richer gold hover effect */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}

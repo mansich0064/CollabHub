@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Group - CollabHub</title>
+    <link rel="stylesheet" href="../static/css/creategroup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="../static/css/logo.png" alt="CollabHub Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <a href="/projectdetails" class="login-button">Back</a>
+        </div>
+    </header>
+<main>
+    <!-- Create Group Section -->
+    <section class="create-group">
+        <div class="container group-container">
+            <h2>Create Your Group</h2>
+            <p>Collaborate effortlessly by creating a group for your project.</p>
+            <form id="group-form" method="POST" action="/creategroup">
+                <!-- Group Name -->
+                <label for="group-name">Group Name:</label>
+                <input type="text" id="group-name" name="group-name" placeholder="Enter your group name" required>
+
+                <!-- Add Members -->
+                <label for="members">Add Members:</label>
+                <div id="members-container">
+                    <div class="member-row">
+                        <input type="email" name="members[]" placeholder="Enter member's email" required>
+                        <select name="roles[]" class="role-select" required>
+                            <option value="" disabled selected>Assign a role</option>
+                            <option value="Team Leader">Team Leader</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Designer">Designer</option>
+                            <option value="Tester">Tester</option>
+                        </select>
+                        <button type="button" class="remove-member-btn">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="add-member-btn">+ Add Another Member</button>
+
+                <center><button type="submit" class="submit-btn">Create Group</button></center>
+            </form>
+            {% if invite_link %}
+            <div class="invite-link">
+                <p><strong>Your Invite Link:</strong></p>
+                <a href="{{ invite_link }}">{{ invite_link }}</a>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+  </main>
+
+     <!-- Footer -->
+     <footer>
+        <p>© 2024 CollabHub. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // JavaScript for adding and removing members
+        document.querySelector('.add-member-btn').addEventListener('click', function() {
+            const membersContainer = document.getElementById('members-container');
+            const memberRow = document.createElement('div');
+            memberRow.className = 'member-row';
+            
+            const newEmailInput = document.createElement('input');
+            newEmailInput.type = 'email';
+            newEmailInput.name = 'members[]';
+            newEmailInput.placeholder = "Enter member's email";
+            newEmailInput.required = true;
+
+            const newRoleSelect = document.createElement('select');
+            newRoleSelect.name = 'roles[]';
+            newRoleSelect.className = 'role-select';
+            newRoleSelect.required = true;
+
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            defaultOption.textContent = 'Assign a role';
+            newRoleSelect.appendChild(defaultOption);
+
+            const roles = ['Team Leader', 'Developer', 'Designer', 'Tester'];
+            roles.forEach(role => {
+                const option = document.createElement('option');
+                option.value = role;
+                option.textContent = role;
+                newRoleSelect.appendChild(option);
+            });
+
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'remove-member-btn';
+            removeBtn.textContent = 'Remove';
+            removeBtn.addEventListener('click', function() {
+                memberRow.remove();
+            });
+
+            memberRow.appendChild(newEmailInput);
+            memberRow.appendChild(newRoleSelect);
+            memberRow.appendChild(removeBtn);
+            membersContainer.appendChild(memberRow);
+        });
+    </script>
+</body>
+</html>

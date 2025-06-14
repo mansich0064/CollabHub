@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CollabHub Workspace</title>
+  <link rel="stylesheet" href="../static/css/workspace.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src="../static/css/logo.png" alt="CollabHub Logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/features">Features</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        {% if session['user_id'] %}
+          <a href="/profile" class="button">Profile</a>
+          <a href="/logout" class="button">Logout</a>
+        {% else %}
+          <a href="/login" class="button">Login</a>
+        {% endif %}
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main 3‑column Layout -->
+  <div class="main-container">
+
+    <!-- Left Sidebar -->
+   <!-- Left Sidebar -->
+<aside class="left-sidebar">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="collapsible">Project
+        <ul class="nested-links">
+          <li>Overview</li>
+          <li>Docs</li>
+        </ul>
+      </li>
+      <li class="collapsible">Plan  <!-- The title should be outside of the <ul> for proper structure -->
+        <ul class="nested-links">
+            <!-- Edit link -->
+            <li>
+                <a href="{{ url_for('edit_plan', group_id=group.id) }}" class="btn btn-primary">Edit</a>
+            </li>
+        </ul>
+    </li>
+    
+      <li class="collapsible">Team
+        <ul class="nested-links">
+          {% for member in team %}
+            <li><strong>{{ member.member_email }}</strong> — {{ member.role }}</li>
+          {% else %}
+            <li>No team members added yet.</li>
+          {% endfor %}
+        </ul>
+      </li>
+      <!-- Move Timeline to the left sidebar -->
+      <li class="collapsible">Timeline
+        <ul class="nested-links">
+          <li><strong>Start Date:</strong> {{ start_date }}</li>
+          <li><strong>End Date:</strong> {{ end_date }}</li>
+        </ul>
+      </li>
+  
+      <li class="collapsible">Links
+        <ul class="nested-links">
+            <h>Code Collaboration</h>
+          <li><a href="https://github.com">GitHub</a></li>
+          <li><a href=" https://gitlab.com">gitlab</a></li>
+          <li><a href="https://bitbucket.org"> Bitbucket</a></li>
+          <h>Documentation</h>
+          <li><a href="https://docs.google.com/"> Google Docs</a></li>
+          <li><a href=" https://www.notion.so">Notion</a></li>
+          <li><a href="https://www.atlassian.com/software/confluence">Confluence</a></li>
+          <li><a href="https://dbdiagram.io/">dB Diagram</a></li>
+          <h>Task Management</h>
+          <li><a href=" https://trello.com">Trello</a></li>
+          <li><a href=" https://asana.com">Asana</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  
+ <!-- Center Kanban Section -->
+<section class="kanban-section">
+    <div class="kanban-header">
+      <div class="project-title">🚀 {{ project_name }}</div>
+      <nav class="kanban-tabs">
+        <a href="#" class="kanban-tab" data-tab="board-tab">Board</a>
+        <a href="#" class="kanban-tab active" data-tab="summary-tab">Summary</a>
+        <a href="#" class="kanban-tab" data-tab="goals-tab">Goals</a>
+      </nav>
+    </div>
+  
+    <!-- Tabbed Content Panels -->
+    <!-- Board Tab -->
+    <div id="board-tab" class="kanban-content">
+      <div class="task-board">
+        <div class="task-column">
+          <h3>To Do</h3>
+          <ul><li>Design Login Page</li><li>Setup Database</li></ul>
+        </div>
+        <div class="task-column">
+          <h3>Doing</h3>
+          <ul><li>Kanban Layout</li></ul>
+        </div>
+        <div class="task-column">
+          <h3>Done</h3>
+          <ul><li>Header Section</li></ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Summary Tab -->
+    <div id="summary-tab" class="kanban-content" style="display:none;">
+      <p><strong>Description:</strong> {{ project_description }}</p>
+    </div>
+  
+    <!-- Goals Tab -->
+    <div id="goals-tab" class="kanban-content" style="display:none;">
+      <p>This is the Goals section.</p>
+    </div>
+  </section>
+  
+  
+
+    <!-- Right Live Chat Panel -->
+    <aside class="chat-section">
+      <h3>Live Chat</h3>
+      <div class="chat-messages">
+        <p><strong>Alice:</strong> Pushed updates to GitHub!</p>
+        <p><strong>Bob:</strong> Working on UI bugs now.</p>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message..." />
+        <button><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CollabHub. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </footer>
+
+  <!-- JS for Tabs & Collapsibles -->
+  <script>
+    // Tab switching
+    document.querySelectorAll(".kanban-tab").forEach(tab => {
+      tab.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelectorAll(".kanban-tab").forEach(t => t.classList.remove("active"));
+        document.querySelectorAll(".kanban-content").forEach(c => c.style.display = "none");
+        document.getElementById(this.dataset.tab).style.display = "block";
+        this.classList.add("active");
+      });
+    });
+
+    // Sidebar collapsibles
+    document.querySelectorAll(".collapsible").forEach(item => {
+      item.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const nested = this.querySelector(".nested-links");
+        if (nested) nested.style.display = nested.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

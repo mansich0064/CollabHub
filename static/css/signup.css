@@ -1,0 +1,283 @@
+/* General Body Styles */
+body {
+    background-image: url('Background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+/* Header Styles */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full viewport height */
+}
+header {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #000; /* Black background */
+    color: #f5c842; /* Golden text */
+    padding: 10px 0;
+    border-bottom: 1px solid #f5c842; /* Golden border */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* On top of content */
+}
+main, .content {
+    flex: 1;
+    margin-top: 80px; /* Adjust this to the actual height of the header */
+    padding: 20px;
+}
+
+/* Container for Header Content */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+header .logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Navigation Links */
+header .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
+    color: #f5c842;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+header .nav-links a:hover {
+     /* Darker gold on hover */
+    border-radius: 5px;
+}
+
+/* Call to Action Button */
+header .cta {
+    background: #f5c842;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header .cta:hover {
+    background: #d4a02a; /* Slightly darker gold on hover */
+}
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margins */
+    display: flex;
+    flex-direction: column;
+}
+main {
+    max-width: 1200px; /* Set the maximum width */
+    width: 100%;
+    margin: 200px auto 30px; /* Center the container */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center content inside if needed */
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    
+}
+.form-group{
+    color: #d064c3;
+}
+/* Sign-Up Form Container */
+.signup-container {
+    background-color:black ;
+    padding: 20px 20px 20px;
+    border: 1px solid  rgb(11, 186, 235);
+    border-radius: 10px;
+    box-shadow:5px 5px 10px 0px rgb(11, 186, 235);
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    
+}
+
+/* Form Header */
+.signup-container h2 {
+    margin-bottom: 10px;
+    color: #FFD700;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    box-shadow:5px 5px 10px 0px rgb(11, 186, 235);
+    border: 1px solid rgb(11, 186, 235);
+    color:#d064c3;
+    background-color: black;
+    border-radius: 8px;
+    font-size: 16px;
+    -webkit-appearance: none;
+}
+
+/* Focused Input Fields */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color:  rgb(11, 186, 235);
+    background-color: black;
+    outline: none;
+    
+    color: #d064c3;
+}
+input:-webkit-autofill {
+    background-color: black !important; /* Keep background black */
+    color: #d064c3 !important; /* Keep text pink */
+    -webkit-text-fill-color: #d064c3 !important; /* Override text color in autofill */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
+
+/* Additional Styles for Firefox */
+input::placeholder {
+    color: #d064c3; /* Placeholder color pink */
+    opacity: 1; /* Ensure full opacity */
+}
+/* Terms Checkbox */
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color:  rgb(11, 186, 235);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    
+}
+
+button[type="submit"]:hover {
+    background-color:  #d064c3;
+    box-shadow:5px 5px 10px 0px rgb(11, 186, 235);
+}
+
+/* Terms and Conditions Link */
+.terms label a {
+    color:#d064c3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.terms label a:hover {
+    text-decoration: underline;
+}
+/* Main Container Centering */
+
+
+/* Footer Full-Width */
+footer {
+    
+    width: 100vw; /* 100% of the viewport width */
+    background-color: #000;
+    color: #FFD700;
+    padding: 10px 0;
+    border-top: 1px solid #f5c842;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .footer-links li {
+    margin: 0 5px;
+}
+
+footer .footer-links a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #d4a02a; /* Richer gold hover effect */
+}
+
+/* Add responsive design */
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+}

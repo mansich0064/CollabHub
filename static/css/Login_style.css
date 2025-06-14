@@ -1,0 +1,246 @@
+/* General Body Style */
+body {
+    background-image: url('Background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #000; /* Header background color */
+    background: #000000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Logo Styling */
+header .logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Links */
+header .nav-links {
+    display: flex;
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
+    color: #f5c842;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* Call to Action Button */
+header .cta {
+    background: #f5c842;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header .cta:hover {
+    background: #d4a02a; /* Slightly darker gold on hover */
+}
+header {
+    background: #000000; /* Dark black header */
+    color: #f5c842;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f5c842; /* Thin golden line below the header */
+}
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Golden color */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 140px); /* Adjust for header/footer height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Login Box */
+.login-box {
+    background-color: #000; /* Black background for the box */
+    border: 2px solid rgb(11, 186, 235); /* Golden border */
+    box-shadow: 5px 5px 10px 0px rgb(11, 186, 235); /* Golden shadow */
+    padding: 50px 20px 30px; /* Extra padding at the top for logo space */
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Half Logo in the Box */
+.login-box .logo-container {
+    position: absolute;
+    top: -50px; /* Adjust to position logo out of the box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Logo width */
+    height: 100px; /* Logo height */
+    overflow: hidden; /* Hide the part of the logo inside the box */
+}
+
+.login-box .logo-container img {
+    width: 100%; /* Adjust to show half the logo inside the box */
+    height: auto;
+}
+
+/* Input Fields */
+.login-box input {
+    width: calc(100% - 20px); /* Full width with padding */
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #FFD700; /* Golden border for inputs */
+    border-radius: 5px;
+    background-color: #000; /* Black background for inputs */
+    color: white; /* Golden text color */
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+/* Login Button */
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(11, 186, 235); /* Golden background for the button */
+    border: none;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+input:-webkit-autofill {
+    background-color: black !important; /* Keep background black */
+    color: white !important; /* Keep text pink */
+    -webkit-text-fill-color: white !important; /* Override text color in autofill */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
+
+/* Additional Styles for Firefox */
+input::placeholder {
+    color: white; /* Placeholder color pink */
+    opacity: 1; /* Ensure full opacity */
+}
+.login-box button:hover {
+    background-color: #dfad39; /* Slightly darker gold on hover */
+   
+}
+.forgot-link {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #FFD700;  /* Change this to your desired color */
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up Container Styles */
+.signup-container {
+    margin-top: 20px; /* Space above the sign-up section */
+    color: #FFD700; /* Golden color */
+    font-size: 14px;
+}
+
+/* Sign Up Text */
+.signup-text {
+    margin: 0;
+    color: #FFD700; /* Golden color for the text */
+    font-size: 14px;
+}
+
+/* Sign Up Link */
+.signup-link {
+    color: #FFD700; /* Golden color for the link */
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.signup-link:hover {
+    color: #d4a02a; /* Slightly darker gold on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: #000000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #f5c842; /* Thin golden line above the footer */
+}
+footer {
+    background: #000; /* Dark black footer */
+    color: #f5c842;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer .footer-links li {
+    margin: 0 10px;
+}
+
+footer .footer-links a {
+    color: #f5c842;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: #d4a02a; /* Richer gold hover effect */
+}

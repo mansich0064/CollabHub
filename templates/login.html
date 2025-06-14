@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/css/Login_style.css"> <!-- Link to your CSS file -->
+    
+</head>
+<body>
+    
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Logo Section with Link -->
+            <div class="logo">
+                <a href="#">
+                    <img src="../static/css/logo.png" alt="CollabHub Logo">
+                </a>
+            </div>
+
+            <!-- Call to Action Button -->
+            <a href="/index" class="login-button">Back</a>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo, positioned half-in/half-out -->
+            <div class="logo-container">
+                <img src="../static/css/logo.png" alt="Logo" class="logo"> <!-- Adjust logo path -->
+            </div>
+            
+            <!-- Login Form -->
+            <form method="POST" action="/login">
+                <input type="email" name="email" placeholder="Mail" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <a href="/open_project">
+                    <button type="submit">Login</button>
+                </a>
+                <a href="/forgot" class="forgot-link">Forgot Password?</a>
+            </form>
+
+            <!-- Additional Text for Sign Up -->
+            <div class="signup-container">
+                <p class="signup-text">Don't Have An Account?</p>
+                <br>
+                <a href="/signup" class="signup-link">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 CollabHub. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CollabHub</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="../static/css/signup.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <div class="container">
+                <!-- Logo Section with Link -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="../static/css/logo.png" alt="CollabHub Logo">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+
+                <!-- Call to Action Button -->
+                <a href="/index" class="login-button">Back</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="signup-container">
+                <h2>Sign Up</h2>
+                <!-- The form now submits to the Python backend using Flask -->
+                <form action="/signup" method="POST" id="signupForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                
+                    <div class="form-group terms">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </main>
+        
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 CollabHub. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Link to JS file -->
+    <script src="../static/js/signup.js"></script>
+</body>
+</html>
